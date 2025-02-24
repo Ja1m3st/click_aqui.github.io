@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #f4f4f4;
+        }
+        #frase {
+            font-size: 24px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Frase Aleatoria</h1>
+    <p id="frase">Cargando frase...</p>
+
+    <script>
+        const frases = [
+            "La vida es un 10% lo que me ocurre y 90% cómo reacciono a ello.",
+            "El éxito no es definitivo, el fracaso no es fatal: lo que cuenta es el coraje para continuar.",
+            "No cuentes los días, haz que los días cuenten.",
+            "No encuentres la falta, encuentra el remedio.",
+            "Haz de cada día tu obra maestra."
+        ];
+
+        function mostrarFrase() {
+            const indice = Math.floor(Math.random() * frases.length);
+            document.getElementById("frase").textContent = frases[indice];
+        }
+
+        // Llamar a la función automáticamente al cargar la página
+        window.onload = mostrarFrase;
+    </script>
+
+</body>
+</html>
